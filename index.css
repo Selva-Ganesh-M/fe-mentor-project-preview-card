@@ -58,6 +58,10 @@ p{
     overflow: clip;
 }
 
+.main .image-div:nth-child(2) {
+    display: none;
+}
+
 .content-div {
     display: flex;
     flex-direction: column;
@@ -122,4 +126,32 @@ button > img {
     height: 20px;
     flex-basis: content;
     color: white;
+}
+
+@media (min-width: 1440px) {
+
+    div.main {
+        flex-direction: row;
+        width: 600px;
+        padding: 0;
+        margin-top: 50vh;
+        transform: translateY(-50%);
+    }
+
+    .main .image-div:first-child {
+        display: none;
+    }
+
+    .main .image-div:nth-child(2) {
+        display: block;
+    }
+
+    .main .image-div {
+        border-radius: 1rem 0 0 1rem;
+    }
+
+    .content-div {
+        justify-content: space-between;
+    }
+
 }
